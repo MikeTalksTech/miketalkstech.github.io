@@ -188,29 +188,55 @@ nav.dark .menu-btn span { background: #fff; }
 .box h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
 .box p { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
 
-/* ===== CLASS CARDS ===== */
+/* ===== CLASS TOPIC GROUPS ===== */
+.topic-group { margin-bottom: 32px; }
+.topic-group:last-child { margin-bottom: 0; }
+
+.topic-group h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.topic-group > p {
+  font-size: 13px;
+  color: var(--text-mid);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
 .cls {
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 20px;
+  padding: 16px 18px;
   background: var(--white);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .cls:hover { border-color: var(--blue); }
-.cls h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-.cls p { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 10px; }
 
-.pills { list-style: none; display: flex; flex-wrap: wrap; gap: 5px; }
-.pills li {
-  padding: 3px 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 11px;
-  color: var(--text-mid);
-  font-weight: 500;
+.cls-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 3px;
 }
+
+.cls h3 { font-size: 14px; font-weight: 600; }
+
+.cls-dur {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--blue);
+  background: var(--blue-tint);
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cls p { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin: 0; }
 
 /* ===== CTA BAR ===== */
 .cta {
