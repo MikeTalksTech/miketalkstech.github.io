@@ -89,14 +89,36 @@
   var words = ["Patrons", "Staff", "Library", "Community", "Organization"];
   var el = document.getElementById("rotate");
   var i = 0;
-  setInterval(function() {
-    el.style.opacity = "0";
-    setTimeout(function() {
+  var speed = 60;
+
+  function typeWord(word, callback) {
+    var c = 0;
+    el.textContent = "";
+    var t = setInterval(function() {
+      el.textContent = word.substring(0, c + 1);
+      c++;
+      if (c >= word.length) { clearInterval(t); if (callback) setTimeout(callback, 1800); }
+    }, speed);
+  }
+
+  function deleteWord(callback) {
+    var text = el.textContent;
+    var c = text.length;
+    var t = setInterval(function() {
+      c--;
+      el.textContent = text.substring(0, c);
+      if (c <= 0) { clearInterval(t); if (callback) setTimeout(callback, 200); }
+    }, speed / 2);
+  }
+
+  function cycle() {
+    deleteWord(function() {
       i = (i + 1) % words.length;
-      el.textContent = words[i];
-      el.style.opacity = "1";
-    }, 300);
-  }, 2500);
+      typeWord(words[i], cycle);
+    });
+  }
+
+  setTimeout(cycle, 2000);
   </script>
 </body>
 </html>

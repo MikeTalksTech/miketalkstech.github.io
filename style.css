@@ -102,8 +102,12 @@ nav.dark .menu-btn span { background: #fff; }
 
 #rotate {
   color: var(--blue-soft);
-  transition: opacity 0.3s;
+  border-right: 2px solid var(--blue-soft);
+  padding-right: 2px;
+  animation: blink 0.7s step-end infinite;
 }
+
+@keyframes blink { 0%,100% { border-color: var(--blue-soft); } 50% { border-color: transparent; } }
 
 .hero p {
   color: rgba(255,255,255,0.85);
