@@ -99,28 +99,23 @@ nav.dark .menu-btn span { background: #fff; }
   line-height: 1.2;
 }
 
-.hero h1 #rotate {
+#rotate {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+
+#rotate span {
   display: inline-block;
   color: var(--blue-soft);
-  overflow: hidden;
-  vertical-align: bottom;
-  height: 1.15em;
-}
-
-.hero h1 #rotate span {
-  display: block;
   transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-.hero h1 #rotate span.out {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.hero h1 #rotate span.in {
   transform: translateY(0);
   opacity: 1;
 }
+
+#rotate span.up { transform: translateY(-100%); opacity: 0; }
+#rotate span.below { transform: translateY(100%); opacity: 0; transition: none; }
 
 .hero p {
   color: rgba(255,255,255,0.85);

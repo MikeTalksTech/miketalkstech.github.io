@@ -23,7 +23,7 @@
 
   <section class="hero">
     <div class="hero-label">Making Technology Make Sense</div>
-    <h1>Technology Classes &amp; Workshops for Your <span id="rotate">Patrons</span></h1>
+    <h1>Technology Classes &amp; Workshops<br>for Your <span id="rotate">Patrons</span></h1>
     <p>I run workshops, classes, and webinars on topics like AI, online safety, and everyday tech skills. I also speak at conferences and staff development events.</p>
     <div class="btn-row">
       <a href="/contact/" class="btn btn-w">Let's Talk Tech &rarr;</a>
@@ -86,28 +86,20 @@
   <footer><p>&copy; 2026 MikeTalksTech. All rights reserved.</p></footer>
 
   <script>
-  (function() {
-    var words = ["Library", "Staff", "Community", "Patrons", "Organization", "Conference"];
-    var el = document.getElementById("rotate");
-    el.innerHTML = '<span class="in">' + words[0] + '</span>';
-    var i = 0;
-    setInterval(function() {
-      var current = el.querySelector("span");
-      current.className = "out";
-      setTimeout(function() {
-        i = (i + 1) % words.length;
-        current.remove();
-        var next = document.createElement("span");
-        next.textContent = words[i];
-        next.style.transform = "translateY(100%)";
-        next.style.opacity = "0";
-        el.appendChild(next);
-        setTimeout(function() {
-          next.className = "in";
-        }, 20);
-      }, 350);
-    }, 2500);
-  })();
+  var words = ["Patrons", "Staff", "Library", "Community", "Organization"];
+  var el = document.getElementById("rotate");
+  el.innerHTML = "<span>" + words[0] + "</span>";
+  var i = 0;
+  setInterval(function() {
+    var s = el.querySelector("span");
+    s.className = "up";
+    setTimeout(function() {
+      i = (i + 1) % words.length;
+      s.textContent = words[i];
+      s.className = "below";
+      setTimeout(function() { s.className = ""; }, 20);
+    }, 350);
+  }, 2500);
   </script>
 </body>
 </html>
