@@ -103,9 +103,9 @@ nav.dark .menu-btn span { background: #fff; }
   display: inline-block;
   overflow: hidden;
   height: 1.2em;
-  width: 5.5em;
+  width: 7em;
   vertical-align: bottom;
-  text-align: left;
+  text-align: center;
 }
 
 #rotate span {
