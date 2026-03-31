@@ -99,6 +99,13 @@ nav.dark .menu-btn span { background: #fff; }
   line-height: 1.2;
 }
 
+.hero h1 #rotate {
+  display: inline-block;
+  color: var(--blue-soft);
+  transition: opacity 0.3s ease;
+  min-width: 180px;
+}
+
 .hero p {
   color: rgba(255,255,255,0.85);
   font-size: 15px;

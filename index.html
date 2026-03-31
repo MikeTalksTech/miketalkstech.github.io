@@ -23,7 +23,7 @@
 
   <section class="hero">
     <div class="hero-label">Making Technology Make Sense</div>
-    <h1>Technology Classes &amp; Workshops</h1>
+    <h1>Technology Classes &amp; Workshops for Your <span id="rotate">Patrons</span></h1>
     <p>I run workshops, classes, and webinars on topics like AI, online safety, and everyday tech skills. I also speak at conferences and staff development events.</p>
     <div class="btn-row">
       <a href="/contact/" class="btn btn-w">Let's Talk Tech &rarr;</a>
@@ -85,5 +85,20 @@
 
   <footer><p>&copy; 2026 MikeTalksTech. All rights reserved.</p></footer>
 
+  <script>
+  (function() {
+    var words = ["Patrons", "Staff", "Library", "Community", "Organization"];
+    var el = document.getElementById("rotate");
+    var i = 0;
+    setInterval(function() {
+      el.style.opacity = 0;
+      setTimeout(function() {
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.style.opacity = 1;
+      }, 300);
+    }, 2500);
+  })();
+  </script>
 </body>
 </html>
