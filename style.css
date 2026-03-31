@@ -101,23 +101,11 @@ nav.dark .menu-btn span { background: #fff; }
 
 #rotate {
   display: inline-block;
-  overflow: hidden;
-  height: 1.2em;
-  width: 7em;
-  vertical-align: bottom;
+  width: 6.5em;
   text-align: center;
-}
-
-#rotate span {
-  display: inline-block;
   color: var(--blue-soft);
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  transform: translateY(0);
-  opacity: 1;
+  transition: opacity 0.3s;
 }
-
-#rotate span.up { transform: translateY(-100%); opacity: 0; }
-#rotate span.below { transform: translateY(100%); opacity: 0; transition: none; }
 
 .hero p {
   color: rgba(255,255,255,0.85);
